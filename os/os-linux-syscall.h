@@ -270,6 +270,13 @@
 #define __NR_ioprio_get		31
 #endif
 
+/* Linux syscalls for loong64 */
+#elif defined(ARCH_LOONGARCH64_H)
+#ifndef __NR_ioprio_set
+#define __NR_ioprio_set		30
+#define __NR_ioprio_get		31
+#endif
+
 #else
 #warning "Unknown architecture"
 #endif

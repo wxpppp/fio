@@ -497,6 +497,8 @@ elif check_define __arm__ ; then
   cpu="arm"
 elif check_define __aarch64__ ; then
   cpu="aarch64"
+elif check_define __loongarch64; then
+  cpu="loongarch64"
 elif check_define __hppa__ ; then
   cpu="hppa"
 else
@@ -525,6 +527,9 @@ case "$cpu" in
   ;;
   mips*)
     cpu="mips"
+  ;;
+  loongarch64)
+    cpu="loongarch64"
   ;;
   sparc|sun4[cdmuv])
     cpu="sparc"
